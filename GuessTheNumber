@@ -1,0 +1,63 @@
+print("\t\t    《 ₲θD么₳βhishe₭ 》\n\n\t* welcome to my guess the number game\n\t* This game contain 5 levels\n\t* You have 5 chance to guess the number\n\n")
+
+
+import random as r
+lev1=r.randrange(1,10)
+lev2=r.randrange(1,20)
+lev3=r.randrange(1,30) 
+lev4=r.randrange(1,40)
+lev5=r.randrange(1,50)
+
+def game(r1,r2,l,lev):
+	
+	chance=0 
+	
+	
+	
+	print("\n"+24*("_")+("LEVEL : ")+str(l)+26*("_")+("\n"))
+	
+	print("Guess the number between "+str(r1)+(" and ")+str(r2))
+	
+	#num=8
+	
+	while True:
+		print("chances Left : "+str(5-chance))
+		a=int(input("Try to guess the number : "))
+		chance=chance+1
+		
+		
+		
+			
+		
+		if a==lev:
+			print("\ncongratulation ! You guess the right number")
+			print("you won the game in "+str(chance)+(" attempts"))
+			break
+		
+	
+		
+		if a<lev:
+			print("\nyou enter the lower number. Try to enter higher number\n")
+			
+		
+		if a>lev:
+			print("\nyou enter the higher number. Try to enter lower number\n")
+		
+			
+			
+		if chance ==5:
+			print("you lost your all chances : You lost")
+			print("\n"+24*(" ")+("GAME OVER")+24*(" "))
+
+			exit()
+			
+			
+game(1,10,1,lev1)
+
+game(1,20,2,lev2)
+
+game(1,30,3,lev3)
+
+game(1,40,4,lev4)
+
+game(1,50,5 ,lev5)
